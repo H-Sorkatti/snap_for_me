@@ -31,14 +31,12 @@ jobs:
 
     - run: flutter pub get
     
-    # - run: flutter test
-    
     - run: flutter build apk --release --split-per-abi
     
     - run: flutter build appbundle --release
     
     - name: Create Github Release
-      uses: ncipollo/release-action@v1
+    - uses: ncipollo/release-action@v1
       with:
         artifacts: "build/app/outputs/apk/release/*.apk,build/app/outputs/bundle/release/*.aab"
         token: ${{ secrets.RELEASES_TOKEN }}
