@@ -49,24 +49,22 @@ class _RippleAnimationState extends State<RippleAnimation>
     return Stack(
       alignment: Alignment.center,
       children: <Widget>[
-        Container(
-          child: AnimatedBuilder(
-            animation:
-                CurvedAnimation(parent: _controller, curve: Curves.decelerate),
-            builder: (context, child) {
-              return Stack(
-                alignment: Alignment.center,
-                children: <Widget>[
-                  _controller.value >= 0.4
-                      ? _buildContainer(300 * _controller.value)
-                      : SizedBox.shrink(),
-                  _controller.value >= 0.4
-                      ? _buildContainer(350 * _controller.value)
-                      : SizedBox.shrink(),
-                ],
-              );
-            },
-          ),
+        AnimatedBuilder(
+          animation:
+              CurvedAnimation(parent: _controller, curve: Curves.decelerate),
+          builder: (context, child) {
+            return Stack(
+              alignment: Alignment.center,
+              children: <Widget>[
+                _controller.value >= 0.4
+                    ? _buildContainer(300 * _controller.value)
+                    : SizedBox.shrink(),
+                _controller.value >= 0.4
+                    ? _buildContainer(350 * _controller.value)
+                    : SizedBox.shrink(),
+              ],
+            );
+          },
         ),
         Container(
           alignment: Alignment.center,
