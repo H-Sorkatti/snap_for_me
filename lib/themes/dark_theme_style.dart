@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:snap_for_me/themes/consts.dart';
 
 class Styles {
   static ThemeData themeData(bool isDarkTheme, BuildContext context) {
     return ThemeData(
       primarySwatch: Colors.red,
-      primaryColor: isDarkTheme ? Colors.black : Colors.white,
+      primaryColor: isDarkTheme ? primaryColorDark : primaryColorLight,
 
-      backgroundColor: isDarkTheme ? Colors.black : const Color(0xffF1F5FB),
+      backgroundColor: isDarkTheme ? primaryColorDark : primaryColorLight,
 
       indicatorColor:
           isDarkTheme ? const Color(0xff0E1D36) : const Color(0xffCBDCF8),
       // ignore: deprecated_member_use
-      buttonColor:
-          isDarkTheme ? const Color(0xff3B3B3B) : const Color(0xffF1F5FB),
+      buttonColor: isDarkTheme ? primaryColorDark : primaryColorLight,
 
       hintColor:
           isDarkTheme ? const Color(0xff280C0B) : const Color(0xffEECED3),
@@ -32,9 +32,15 @@ class Styles {
           colorScheme: isDarkTheme
               ? const ColorScheme.dark()
               : const ColorScheme.light()),
-      appBarTheme: const AppBarTheme(
-        elevation: 0.0,
-      ),
+      appBarTheme: isDarkTheme
+          ? const AppBarTheme(
+              elevation: 0.0,
+              backgroundColor: primaryColorDark,
+            )
+          : const AppBarTheme(
+              elevation: 0.0,
+              backgroundColor: primaryColorLight,
+            ),
       textSelectionTheme: TextSelectionThemeData(
           selectionColor: isDarkTheme ? Colors.white : Colors.black),
     );
