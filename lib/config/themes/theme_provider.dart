@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:snap_for_me/themes/dark_theme_preference.dart';
+import 'package:snap_for_me/config/themes/theme_preference.dart';
 
 class DarkThemeProvider with ChangeNotifier {
   DarkThemePreference darkThemePreference = DarkThemePreference();

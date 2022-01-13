@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:snap_for_me/audio_player.dart';
+import 'package:snap_for_me/utils/audio_player.dart';
 
 class RippleAnimation extends StatefulWidget {
   const RippleAnimation({Key? key}) : super(key: key);

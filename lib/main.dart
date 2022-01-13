@@ -3,10 +3,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:snap_for_me/about.dart';
-import 'package:snap_for_me/ripple_animation.dart';
-import 'package:snap_for_me/themes/dark_theme_provider.dart';
-import 'package:snap_for_me/themes/dark_theme_style.dart';
+import 'package:snap_for_me/screens/about.dart';
+import 'package:snap_for_me/screens/home.dart';
+import 'package:snap_for_me/config/themes/theme_provider.dart';
+import 'package:snap_for_me/config/themes/theme_style.dart';
 
 void main() {
   runApp(MyApp());
@@ -45,45 +45,8 @@ class _MyAppState extends State<MyApp> {
             theme: Styles.themeData(themeChangeProvider.darkTheme, context),
             home: MyHomePage(title: 'طقطق لي'),
             routes: <String, WidgetBuilder>{
-              '/Agenda': (context) => AboutMe(),
+              '/about': (context) => AboutMe(),
             }),
-      ),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    final themeChange = Provider.of<DarkThemeProvider>(context);
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Center(child: Text("طقطق لي")),
-        actions: [
-          TextButton(
-            child: Text('About'),
-            onPressed: () => Navigator.push(
-                context, MaterialPageRoute(builder: (context) => AboutMe())),
-          ),
-          Switch(
-              value: themeChange.darkTheme,
-              onChanged: (bool value) {
-                themeChange.darkTheme = value;
-              })
-        ],
-      ),
-      body: SafeArea(
-        child: RippleAnimation(),
       ),
     );
   }

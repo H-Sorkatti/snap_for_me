@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:snap_for_me/themes/consts.dart';
+import 'package:snap_for_me/config/constants/colors.dart';
 
 class Styles {
   static ThemeData themeData(bool isDarkTheme, BuildContext context) {
