@@ -4,45 +4,39 @@ import 'package:snap_for_me/config/constants/colors.dart';
 class Styles {
   static ThemeData themeData(bool isDarkTheme, BuildContext context) {
     return ThemeData(
-      primarySwatch: Colors.red,
-      primaryColor: isDarkTheme ? primaryColorDark : primaryColorLight,
-
-      backgroundColor: isDarkTheme ? primaryColorDark : primaryColorLight,
-
-      indicatorColor:
-          isDarkTheme ? const Color(0xff0E1D36) : const Color(0xffCBDCF8),
-      // ignore: deprecated_member_use
-      buttonColor: isDarkTheme ? primaryColorDark : primaryColorLight,
-
-      hintColor:
-          isDarkTheme ? const Color(0xff280C0B) : const Color(0xffEECED3),
-
-      highlightColor:
-          isDarkTheme ? const Color(0xff372901) : const Color(0xffFCE192),
-      hoverColor:
-          isDarkTheme ? const Color(0xff3A3A3B) : const Color(0xff4285F4),
-
-      focusColor:
-          isDarkTheme ? const Color(0xff0B2512) : const Color(0xffA8DAB5),
-      disabledColor: Colors.grey,
-      cardColor: isDarkTheme ? const Color(0xFF151515) : Colors.white,
-      canvasColor: isDarkTheme ? Colors.black : Colors.grey[50],
-      brightness: isDarkTheme ? Brightness.dark : Brightness.light,
-      buttonTheme: Theme.of(context).buttonTheme.copyWith(
-          colorScheme: isDarkTheme
-              ? const ColorScheme.dark()
-              : const ColorScheme.light()),
-      appBarTheme: isDarkTheme
-          ? const AppBarTheme(
-              elevation: 0.0,
-              backgroundColor: primaryColorDark,
-            )
-          : const AppBarTheme(
-              elevation: 0.0,
-              backgroundColor: primaryColorLight,
-            ),
-      textSelectionTheme: TextSelectionThemeData(
-          selectionColor: isDarkTheme ? Colors.white : Colors.black),
-    );
+        fontFamily: "Tajawal",
+        primaryIconTheme: IconThemeData(
+          color: isDarkTheme ? primaryColorLight : primaryColorDark,
+        ),
+        iconTheme: IconThemeData(
+          color: isDarkTheme ? primaryColorLight : primaryColorDark,
+        ),
+        scaffoldBackgroundColor:
+            isDarkTheme ? primaryColorDark : primaryColorLight,
+        primaryColor: isDarkTheme ? primaryColorDark : primaryColorLight,
+        backgroundColor: isDarkTheme ? primaryColorDark : primaryColorLight,
+        buttonTheme: ButtonThemeData(
+          buttonColor: isDarkTheme ? primaryColorDark : primaryColorLight,
+        ),
+        appBarTheme: AppBarTheme(
+          elevation: 0.0,
+          backgroundColor: isDarkTheme ? primaryColorDark : primaryColorLight,
+          foregroundColor: isDarkTheme ? primaryColorLight : primaryColorDark,
+          iconTheme: IconThemeData(
+              color: isDarkTheme ? primaryColorLight : primaryColorDark),
+          actionsIconTheme: IconThemeData(
+              color: isDarkTheme ? primaryColorLight : primaryColorDark),
+          titleTextStyle: TextStyle(
+              fontFamily: "Tajawal",
+              color: isDarkTheme ? primaryColorLight : primaryColorDark),
+        ),
+        textSelectionTheme: TextSelectionThemeData(
+          selectionColor: isDarkTheme ? primaryColorLight : primaryColorDark,
+        ),
+        textTheme: TextTheme(
+          headline5: TextStyle(
+            color: isDarkTheme ? primaryColorDark : primaryColorLight,
+          ),
+        ));
   }
 }
