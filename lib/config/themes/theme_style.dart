@@ -34,9 +34,17 @@ class Styles {
           selectionColor: isDarkTheme ? primaryColorLight : primaryColorDark,
         ),
         textTheme: TextTheme(
-          headline5: TextStyle(
-            color: isDarkTheme ? primaryColorDark : primaryColorLight,
-          ),
-        ));
+            headline4: TextStyle(
+              color: isDarkTheme ? primaryColorDark : primaryColorLight,
+              fontSize: 16,
+            ),
+            headline5: TextStyle(
+              color: isDarkTheme ? primaryColorDark : primaryColorLight,
+              fontSize: 18,
+            ),
+            headline6: TextStyle(
+              color: isDarkTheme ? primaryColorLight : primaryColorDark,
+              fontSize: 20,
+            )));
   }
 }
