@@ -1,6 +1,6 @@
 # Snap For Me
 <br/>
-<img src="./assets/snap_icon.png" width="257" height="192" />
+<img src="./assets/images/snap_icon.png" width="257" height="192" />
 <br/>
 <br/>
 A requested Flutter app that produces finger snapping sounds or tells the bus driver to pull over.
@@ -8,7 +8,8 @@ A requested Flutter app that produces finger snapping sounds or tells the bus dr
 <br/>
 <br/>
 <br/>
-Screenshot:
+Screenshots:
 <br/>
 <br/>
-<img src="./assets/screenshot.jpg" width="180" height="368" />
+<img src="./assets/images/Main-Light.png" width="180" height="368" />
+<img src="./assets/images/Main-Dark.png" width="180" height="368" />
