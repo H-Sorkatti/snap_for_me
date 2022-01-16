@@ -97,12 +97,14 @@ class _RippleAnimationState extends State<RippleAnimation>
   }
 
   Widget _buildContainer(double radius) {
+    final themeChange = Provider.of<DarkThemeProvider>(context);
     return Container(
       width: radius,
       height: radius,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: Colors.red.withOpacity(1 - _controller.value),
+        color: (themeChange.darkTheme ? primaryColorLight : primaryColorDark)
+            .withOpacity(1 - _controller.value),
       ),
     );
   }

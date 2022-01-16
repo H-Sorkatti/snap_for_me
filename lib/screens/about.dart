@@ -44,7 +44,7 @@ class AboutMe extends StatelessWidget {
               Align(
                 alignment: Alignment.centerRight,
                 child: Text(
-                  "طقطق لي تطبيق عشان يساعد الناس الما بتعرف تتطقطق اصابعينها عشان تنبه الناس زي مثلا : ",
+                  "طقطق لي تطبيق يساعد الناس الما بتعرف تطقطق أصابعينها عشان تنبه الناس، زي مثلا : ",
                   textDirection: TextDirection.rtl,
                   style: Theme.of(context).textTheme.headline6,
                 ),
@@ -62,7 +62,7 @@ class AboutMe extends StatelessWidget {
               Align(
                 alignment: Alignment.centerRight,
                 child: Text(
-                  "* لو عايز تلفت ليك زول",
+                  "* لو عايز تلفت ليك زول.",
                   textDirection: TextDirection.rtl,
                   style: Theme.of(context).textTheme.headline6,
                 ),
@@ -73,7 +73,7 @@ class AboutMe extends StatelessWidget {
                   Align(
                     alignment: Alignment.center,
                     child: Text(
-                      "التطبيق شاركو في عملو : ",
+                      "التطبيق شارك في عملو : ",
                       textDirection: TextDirection.rtl,
                       style: Theme.of(context).textTheme.headline6,
                     ),

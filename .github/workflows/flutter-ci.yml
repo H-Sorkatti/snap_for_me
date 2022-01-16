@@ -47,4 +47,4 @@ jobs:
         artifacts: "build/app/outputs/apk/release/*.apk,build/app/outputs/bundle/release/*.aab"
         token: ${{ secrets.RELEASE_TOKEN }}
         allowUpdates: true
-        tag: "v0.1.0"
+        tag: "v0.2.0"
